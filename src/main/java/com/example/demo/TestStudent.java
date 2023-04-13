@@ -35,10 +35,11 @@ public class TestStudent {
 //        s.setAge(23);
 //        s.setName("大");
 //        stuService.save(s);
-        Order s=new Order();
-        s.setOrderName("测试");
-        s.setOrderPrice(new BigDecimal(50));
-        orderService.save(s);
+//        Order s=new Order();
+//        s.setOrderName("测试");
+//        s.setOrderPrice(new BigDecimal(50));
+//        orderService.save(s);
+        stuService.ceTranstanion();
         //   stuService.update(s,new UpdateWrapper<Student>().eq("name","小"));
         //  stuService.remove(new QueryWrapper<Student>().eq("name","大"));
        // List<Student> studentList=stuService.list(new QueryWrapper<Student>());

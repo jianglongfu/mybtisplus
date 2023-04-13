@@ -29,7 +29,8 @@ public class StudentController {
         Student s=new Student();
         s.setAge(23);
         s.setName("大");
-        stuService.save(s);
+        stuService.ceTranstanion();
+       // stuService.save(s);
         //   stuService.update(s,new UpdateWrapper<Student>().eq("name","小"));
         //  stuService.remove(new QueryWrapper<Student>().eq("name","大"));
         List<Student> studentList=stuService.list(new QueryWrapper<Student>());
