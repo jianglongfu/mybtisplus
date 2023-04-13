@@ -1,0 +1,30 @@
+easy-es:
+  address: 127.0.0.1:9200
+  enable: true
+management:
+  health:
+    elasticsearch:
+      enabled: false
+server:
+  port: 8080
+  servlet:
+    context-path: /demo
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useruseUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: 123456
+  mail:
+    default-encoding: UTF-8
+    host: smtp.qq.com
+    password: soxpbhmynbfaigbi #qq授权码
+    username: 1529740851@qq.com
+cloud:
+  gateway:
+    routes:
+      id: gateway-service
+      uri: https://www.baidu.com
+      order: 0
+      predicates:
+        - Header=X-Request-Id
