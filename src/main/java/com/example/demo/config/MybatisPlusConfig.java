@@ -51,33 +51,33 @@ public class MybatisPlusConfig {
      * 配置文件和mybatis-boot的配置文件同步
      * @return
      */
-    @Bean
-    public MybatisSqlSessionFactoryBean mybatisSqlSessionFactoryBean() {
-        MybatisSqlSessionFactoryBean mybatisPlus = new MybatisSqlSessionFactoryBean();
-        mybatisPlus.setDataSource(dataSource);
-        mybatisPlus.setVfs(SpringBootVFS.class);
-        if (StringUtils.hasText(this.properties.getConfigLocation())) {
-            mybatisPlus.setConfigLocation(this.resourceLoader.getResource(this.properties.getConfigLocation()));
-        }
-        mybatisPlus.setConfiguration((MybatisConfiguration) properties.getConfiguration());
-        if (!ObjectUtils.isEmpty(this.interceptors)) {
-            mybatisPlus.setPlugins(this.interceptors);
-        }
-        MybatisConfiguration mc = new MybatisConfiguration();
-        mc.setDefaultScriptingLanguage(MybatisXMLLanguageDriver.class);
-        mybatisPlus.setConfiguration(mc);
-        if (this.databaseIdProvider != null) {
-            mybatisPlus.setDatabaseIdProvider(this.databaseIdProvider);
-        }
-        if (StringUtils.hasLength(this.properties.getTypeAliasesPackage())) {
-            mybatisPlus.setTypeAliasesPackage(this.properties.getTypeAliasesPackage());
-        }
-        if (StringUtils.hasLength(this.properties.getTypeHandlersPackage())) {
-            mybatisPlus.setTypeHandlersPackage(this.properties.getTypeHandlersPackage());
-        }
-        if (!ObjectUtils.isEmpty(this.properties.resolveMapperLocations())) {
-            mybatisPlus.setMapperLocations(this.properties.resolveMapperLocations());
-        }
-        return mybatisPlus;
-    }
+//    @Bean
+//    public MybatisSqlSessionFactoryBean mybatisSqlSessionFactoryBean() {
+//        MybatisSqlSessionFactoryBean mybatisPlus = new MybatisSqlSessionFactoryBean();
+//        mybatisPlus.setDataSource(dataSource);
+//        mybatisPlus.setVfs(SpringBootVFS.class);
+//        if (StringUtils.hasText(this.properties.getConfigLocation())) {
+//            mybatisPlus.setConfigLocation(this.resourceLoader.getResource(this.properties.getConfigLocation()));
+//        }
+//        mybatisPlus.setConfiguration((MybatisConfiguration) properties.getConfiguration());
+//        if (!ObjectUtils.isEmpty(this.interceptors)) {
+//            mybatisPlus.setPlugins(this.interceptors);
+//        }
+//        MybatisConfiguration mc = new MybatisConfiguration();
+//        mc.setDefaultScriptingLanguage(MybatisXMLLanguageDriver.class);
+//        mybatisPlus.setConfiguration(mc);
+//        if (this.databaseIdProvider != null) {
+//            mybatisPlus.setDatabaseIdProvider(this.databaseIdProvider);
+//        }
+//        if (StringUtils.hasLength(this.properties.getTypeAliasesPackage())) {
+//            mybatisPlus.setTypeAliasesPackage(this.properties.getTypeAliasesPackage());
+//        }
+//        if (StringUtils.hasLength(this.properties.getTypeHandlersPackage())) {
+//            mybatisPlus.setTypeHandlersPackage(this.properties.getTypeHandlersPackage());
+//        }
+//        if (!ObjectUtils.isEmpty(this.properties.resolveMapperLocations())) {
+//            mybatisPlus.setMapperLocations(this.properties.resolveMapperLocations());
+//        }
+//        return mybatisPlus;
+//    }
 }

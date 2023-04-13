@@ -11,10 +11,16 @@ server:
     context-path: /demo
 spring:
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/test?useruseUnicode=true&characterEncoding=utf8&serverTimezone=UTC
-    username: root
-    password: 123456
+       ds1:
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          jdbc-url: jdbc:mysql://localhost:3306/test?useruseUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+          username: root
+          password: 123456
+       ds2:
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          jdbc-url: jdbc:mysql://localhost:3306/test1?useruseUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+          username: root
+          password: 123456
   mail:
     default-encoding: UTF-8
     host: smtp.qq.com
